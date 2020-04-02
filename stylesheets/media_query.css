@@ -1,0 +1,644 @@
+/*media query*/
+@media (max-width: 1700px) {
+    .banner-about-what {
+        background-position: 0 370px;
+    }
+
+    .slogan {
+        margin-top: 20%
+    }
+}
+
+@media(max-width: 1601px) {
+    .responsive-banner {
+        /* min-height: 120%; */
+        /* background: url(../images/ai-line.svg) no-repeat 0 -180px, url(../images/ai-line@180deg.svg) no-repeat 0 440px #011631; */
+    }
+}
+
+@media (max-width: 1600px) {
+    .responsive-banner {
+        /* min-height: 120%; */
+        /* background: url(../images/ai-line.svg) no-repeat 0 -180px, url(../images/ai-line@180deg.svg) no-repeat 0 440px #011631; */
+    }
+
+    .slogan {
+        margin-top: 14%
+    }
+
+    .banner-about-what {
+        background-position: 0 390px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .responsive-banner {
+        /* min-height: 115%; */
+        /* background: url(../images/ai-line.svg) no-repeat 0 -180px, url(../images/ai-line@180deg.svg) no-repeat 0 440px #011631; */
+    }
+
+    .banner-about-what {
+        background-position: 0 440px;
+    }
+
+    .technical {
+
+    }
+}
+
+@media (max-width: 1320px) {
+    .responsive-banner {
+        /*background: url(../images/ai-line.svg) no-repeat top,url(../images/ai-line@180deg.svg) no-repeat bottom,linear-gradient(6deg,#fff 0%,#fff 33.33%,#011631 33.33%,#011631 66.66%,#011631 66.66%,#011631 100%);*/
+        /* background: url(../images/ai-line.svg) no-repeat 0 -160px, url(../images/ai-line@180deg.svg) no-repeat bottom #011631; */
+    }
+
+    .banner-about-what {
+        background-position: 0 460px;
+    }
+
+    .technical {
+        padding: 50px;
+    }
+
+    .wallet-download .container {
+
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .wallet-download .container {
+
+    }
+
+    .download-system {
+        margin-top: 66px;
+    }
+}
+
+@media (max-width: 1260px) {
+
+    .download-system {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1240px) {
+
+    .technical {
+        padding: 20px;
+    }
+
+    .download-system {
+        margin-top: 48px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .contentbox {
+        font-size: 
+    }
+
+    .slogan {
+        margin-top: 20%
+    }
+
+    .slogan h1 {
+        font-size: 40px;
+    }
+
+    .banner-about .thumbnail {
+        margin-bottom: 0;
+    }
+
+    .banner-about-es .media {
+        margin-top: 10px;
+    }
+
+    .banner-about-es h2 {
+        margin-bottom: 10px;
+    }
+
+    .line-h30px {
+        line-height: 20px;
+    }
+
+    .banner-about-what {
+        background-position: 0 370px;
+        min-height: 770px;
+    }
+
+    .banner-about .banner-about-bg {
+        padding: 20px 8%;
+    }
+
+    .btn-lg {
+        padding: 6px 12px;
+    }
+
+    .download-system {
+        margin-top: 30px;
+    }
+
+    .download-system-githup {
+        margin-top: 20px;
+    }
+
+    .technical-parameter-1 {
+        margin: 0 auto;
+        float: none;
+    }
+
+    .technical-parameter-2 {
+        float: none;
+    }
+
+    .technical-parameter-2 .mining-algorithm, .technical-parameter-2 .team-show {
+        margin: 0 auto;
+    }
+
+    .wallet-download {
+        min-height: auto;
+    }
+
+    .problem-solving-person h2 span:nth-of-type(1), .problem-solving-person h2 span:nth-of-type(3) {
+        width: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .banner-about-what {
+        background-position: 0 400px;
+    }
+
+    .banner-about {
+        /* margin-top: -25%; */
+    }
+
+    .slogan {
+        height: 140px;
+    }
+}
+
+@media (max-width: 997px) {
+    .responsive-banner {
+        /* min-height: 837px; */
+    }
+
+    .banner-about {
+        /* margin-top: -18%; */
+    }
+
+    .banner-about-es .media {
+        margin-top: 15px;
+    }
+
+    .en-web-slogan h1 {
+        font-size: 28px;
+    }
+
+    .banner-about-what .what-video {
+        padding: 0 0;
+    }
+
+    .banner-about-what {
+        background-position: 0 420px;
+    }
+
+    .technical {
+
+    }
+
+    .line-h30px {
+        line-height: 16px;
+    }
+
+    .banner-about .banner-about-bg {
+        padding: 1px 6%;
+        min-height: auto;
+        background: none;
+        background-color: #fff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding-bottom: 30px;
+        -webkit-box-shadow: 0 5px 5px #eee;
+        -moz-box-shadow: 0 5px 5px #eee;
+        box-shadow: 0 5px 5px #eee;
+    }
+
+    .btn-lg {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .download-system {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .download-system img {
+        width: 32px;
+    }
+
+    .problem-solving-person {
+        background: url(../images/FAQ-person@2.png) no-repeat left;
+        padding-bottom: 16px;
+        padding-top: 80px;
+    }
+
+    .problem-solving-person {
+        margin: 20px 0;
+        padding-left: 34%;
+    }
+}
+
+@media (max-width: 992px) {
+    .slogan h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .responsive-banner {
+        /*background: url(../images/ai-line.svg) no-repeat top,url(../images/ai-line@180deg.svg) no-repeat bottom,linear-gradient(6deg,#fff 0%,#fff 33.33%,#011631 33.33%,#011631 66.66%,#011631 66.66%,#011631 100%);*/
+        /* background: url(../images/ai-line.svg) no-repeat 0 -80px, url(../images/ai-line@180deg.svg) no-repeat bottom #011631; */
+    }
+}
+
+@media (max-width: 840px) {
+
+}
+
+@media (max-width: 800px) {
+    .responsive-banner {
+        /* min-height: 560px; */
+    }
+
+    .banner-about-what {
+        background-position: 0 450px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-about-feature .feature-line:after {
+        position: static;
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: none;
+        z-index: -1;
+    }
+
+    .problem-solving-person {
+        padding-left: 33%;
+    }
+
+    .responsive-banner {
+        /* min-height: 500px; */
+        /* background: url(../images/ai-line.svg) no-repeat 0 -50px, url(../images/ai-line@180deg.svg) no-repeat bottom #011631; */
+    }
+
+    .slogan h1 {
+        font-size: 28px;
+    }
+
+    .en-web-slogan h1 {
+        font-size: 24px;
+    }
+
+    .link-act {
+        border: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .banner-about-what {
+        background-position: 0 430px;
+        background: none;
+        min-height: auto;
+    }
+
+    .slogan h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    .slogan h1, .link-act {
+        text-align: center
+    }
+}
+
+@media (max-width: 640px) {
+    .slogan {
+        margin-top: 26%;
+    }
+
+    .responsive-banner {
+        /* background: url(../images/ai-line.svg) no-repeat 0 -20px, url(../images/ai-line@180deg.svg) no-repeat bottom #011631; */
+    }
+
+    .download-unnormal {
+        display: block;
+    }
+
+    .download-normal {
+        display: none
+    }
+
+    .download-unnormal a {
+        margin: 0 10px;
+    }
+
+    .wallet-download {
+        background-size: cover;
+    }
+
+    .concat-way {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-banner {
+        /* min-height: 430px; */
+    }
+
+    .en-web-slogan h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .en-web-slogan h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .en-web-slogan h1 {
+        font-size: 18px;
+    }
+
+    .en-web-slogan h2 {
+        font-size: 16px;
+    }
+
+    h2 span:nth-of-type(1), h2 span:nth-of-type(3) {
+        width: 0;
+    }
+
+    .banner-about h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .responsive-banner {
+        /* min-height: 360px; */
+    }
+}
+
+@media (max-width: 470px) {
+    .problem-solving-person {
+        padding-left: 0;
+    }
+
+    .problem-solving-person h3 {
+        text-align: center;
+    }
+
+    .problem-solving-person h2 {
+        text-align: center
+    }
+}
+
+@media (max-width: 440px) {
+    .slogan > h1:nth-of-type(2) {
+        margin-top: 0
+    }
+
+    .bhd-footer{font-size: 12px;}
+
+    .trade-icon img{width: 100px;}
+
+    .problem-solving-person h2{
+        margin:0;
+    }
+
+    .flex-ul{
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 415px) {
+    .navbar-inverse {
+        background-color: #273143;
+    }
+
+    .technical-parameter-body p {
+        font-size: 14px;
+    }
+
+    .responsive-banner {
+        /* min-height: 280px; */
+    }
+
+    .banner-about-feature h2 {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .banner-about {
+        /* margin-top: -6%; */
+    }
+
+    .slogan-raise.en-web-slogan h1:nth-of-type(2) {
+        margin-bottom: 59px;
+    }
+
+    .banner-about-what h2 {
+        margin-bottom: 24px;
+        margin-top: 0;
+    }
+
+    .technical-parameter-1, .technical-parameter-2 .mining-algorithm, .technical-parameter-2 .team-show {
+        background: none;
+        padding: 0;
+        height: auto;
+        width: auto;
+    }
+
+    .technical-parameter-1 img, .technical-parameter-2 .mining-algorithm img, .technical-parameter-2 .team-show h3 img {
+        width: 32px;
+    }
+
+    .technical-parameter-1 h3, .technical-parameter-2 .mining-algorithm h3, .technical-parameter-2 .team-show h3 {
+        font-size: 30px;
+    }
+
+    .download-unnormal a {
+        font-size: 12px;
+    }
+
+    p {
+        margin: 0 0 6px;
+    }
+
+    .problem-solving-person {
+        padding-top: 0;
+        min-height: auto;
+        padding-left: 0;
+    }
+
+    .slogan {
+        margin-top: 20%;
+        height: 108px;
+    }
+
+    .slogan h1 {
+        font-size: 20px;
+    }
+
+    .en-web-slogan h1 {
+        font-size: 18px;
+    }
+
+    .notice > span {
+        right: -4px !important;
+    }
+
+    .link-act {
+        bottom: 10px;
+    }
+
+    .wallet-download {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .responsive-banner {
+        /* min-height: 260px; */
+    }
+
+    .wallet-download {
+        background-size: auto;
+    }
+
+    .problem-solving {
+        padding-top: 0px;
+    }
+
+    .slogan {
+        margin-top: 25%
+    }
+
+    .slogan h1 {
+        font-size: 18px;
+    }
+
+    .en-web-slogan h1 {
+        font-size: 16px;
+    }
+
+    .slogan-raise.en-web-slogan h1:nth-of-type(2) {
+        margin-bottom: 57px;
+    }
+
+}
+
+@media (max-width: 374px) {
+
+    .responsive-banner {
+        /* min-height: 200px; */
+    }
+
+    .banner-about .banner-about-bg {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        padding: 15px;
+        background-color: transparent;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .banner-about-feature h2 {
+        margin-top: 0;
+    }
+
+    .banner-about-what {
+        min-height: auto;
+    }
+
+    .technical-parameter-1, .technical-parameter-2 .mining-algorithm, .technical-parameter-2 .team-show {
+        background: none;
+        padding: 0;
+        height: auto;
+        width: auto;
+    }
+
+    .technical-parameter-1 img, .technical-parameter-2 .mining-algorithm img, .technical-parameter-2 .team-show h3 img {
+        width: 32px;
+    }
+
+    .technical-parameter-1 h3, .technical-parameter-2 .mining-algorithm h3, .technical-parameter-2 .team-show h3 {
+        font-size: 18px;
+    }
+
+    .problem-solving-person {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner-about {
+        /* margin-top: -6%; */
+    }
+
+    .panel-title {
+        font-size: 14px;
+    }
+
+    .wallet-download {
+        background-size: auto;
+    }
+
+    .problem-solving-person {
+        padding-top: 0;
+        min-height: auto;
+    }
+
+    .problem-solving {
+        padding-top: 30px;
+    }
+
+    .feature-line p {
+        font-size: 14px;
+    }
+
+    .slogan h1 {
+        font-size: 18px;
+    }
+
+    .en-web-slogan h1 {
+        font-size: 14px;
+    }
+
+    .slogan-raise.en-web-slogan h1:nth-of-type(2) {
+        margin-bottom: 63px;
+    }
+
+}

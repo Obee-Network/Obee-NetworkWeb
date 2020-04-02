@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        BHD
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="baidu-site-verification" content="4kq7nyPohf">
+    <meta name="google-site-verification" content="aY-6F7u1aD-k7FKqtXq81slvf0Mc0JJb1Kxsz58V0TQ">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <link rel="shortcut icon" href="..\images\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="..\stylesheets\explorer-0ba73ed09c.css">
+    <style>
+        .modal-open .navbar-fixed-top {
+            padding-right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .mrt80 {
+                margin-top: 15%;
+            }
+        }
+    </style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..\index.html">
+                <img alt="Brand" src="..\images\logo-hd90.png" class="bco-logoimg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="network.html">Network</a></li>
+                <li><a href="block.html">Blocks</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" onsubmit="return false;">
+                <div class="form-group">
+                    <input type="text" class="form-control bcoSearch" placeholder="block, transaction, plotter">
+                </div>
+                <button type="submit" class="btn btn-warning bcoSearchBtn">Search</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container mrt80">
+    <div class="table-responsive pos-relative">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Height</th>
+                <th>Time</th>
+                <th>Transactions</th>
+                <th>Confirmations</th>
+                <th class="text-center">Pool</th>
+            </tr>
+            </thead>
+            <tbody id="tableOneRender">
+            <tr class="tr-hover-none">
+                <td colspan="5" class="text-center"><img src="..\images\loading-0.gif" alt="BHD"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="mask-paging">
+            <img src="..\images\loading-0.gif" alt="BHD">
+        </div>
+    </div>
+
+    <div class="text-center">
+        <ul class="pagination pagination-sm">
+        </ul>
+    </div>
+</div>
+
+<script src="..\js\jquery-3.2.1.min.js"></script>
+<script src="..\js\ejs.min.js"></script>
+<script src="..\js\protocol.config.js"></script>
+<script src="..\js\search.js"></script>
+<script src="..\js\moment.min.js"></script>
+<script src="..\js\transition.js"></script>
+<script src="..\js\collapse.js"></script>
+<script src="..\js\bootstrap-paginator.min.js"></script>
+<script>
+    var HEIGHT = 0;
+
+    $(function () {
+        var ONETIME = 0;
+
+        getBestBlock();
+        getBlockMessage(0);
+
+        function getBlockMessage(param) {
+            $.ajax({
+                type: "get",
+                url: protocol + "block?page=" + param + "&count=20",
+                dataType: "JSON",
+                success: function (msg) {
+                    if (ONETIME === 0 && msg.total > 0) {
+                        initPaging(msg.total);//Paging
+
+                        ONETIME++;
+                    }
+
+                    if (msg.data.length === 0) {
+                        $("#tableOneRender").html('<tr class="tr-hover-none"><td colspan="5" class="text-center"><img src="/images/no-data.png" alt="BHD"></td></tr>');
+                    } else {
+                        $("#tableOneRender").html(ejs.render($("#tableOne").html(), {data: msg.data, page: msg.page}));
+                    }
+
+                    $(".mask-paging").css({display: 'none'});
+                }, error: function () {
+                    $(".mask-paging").css({display: 'none'});
+                    $("#tableOneRender").html('<tr class="tr-hover-none"><td colspan="5" class="text-center"><img src="/images/error.png" alt="BHD"></td></tr>');
+                }
+            });
+        }
+
+        function initPaging(m) {
+            var options = {
+                size: "small",
+                bootstrapMajorVersion: 3,
+                currentPage: 1,
+                numberOfPages: 5,
+                totalPages: Math.ceil(m / 20),
+                itemTexts: function (type, page, current) {
+                    switch (type) {
+                        case "first":
+                            return "first";
+                        case "prev":
+                            return "<";
+                        case "next":
+                            return ">";
+                        case "last":
+                            return "last";
+                        case "page":
+                            return page;
+                    }
+                },
+                tooltipTitles: function (type, page, current) {
+                    switch (type) {
+                        case "first":
+                        case "prev":
+                        case "next":
+                        case "last":
+                            return;
+                    }
+                },
+                onPageClicked: function (e, originalEvent, type, page) {
+                    $(".mask-paging").css({display: '-ms-flexbox', display: 'flex'});
+
+                    getBlockMessage(page - 1);
+                }
+            };
+
+            $(".pagination").bootstrapPaginator(options);
+        }
+    });
+
+    function getBestBlock() {
+        $.ajax({
+            type: "get",
+            async: false,
+            url: protocol + "bestblock",
+            dataType: "JSON",
+            success: function (msg) {
+                HEIGHT = msg.height;
+            }, error: function () {
+                HEIGHT = 0;
+            }
+        });
+    }
+</script>
+<script charset="UTF-8" type="text/template" id="tableOne">
+    <%data.forEach(function(m,n){%>
+    <tr>
+        <td>
+            <a href="/explorer/block/<%=m.hash%>"><%=m.height%></a>
+        </td>
+        <td>
+            <%=moment(m.time*1000).format('YYYY/MM/DD HH:mm:ss')%>
+        </td>
+        <td>
+            <%=m.txCount%>
+        </td>
+        <td>
+            <%=(20*page) + (n+1)%>
+        </td>
+        <td class="text-center">
+            <%if(m.generatorTag){%>
+            <a class="text-warning" href="<%=m.generatorTag.link%>" target="_blank" title="<%=m.generatorTag.address%>"><b><%=m.generatorTag.title%></b></a>
+            <%}%>
+        </td>
+    </tr>
+    <%})%>
+</script>
+
+</body>
+
+</head></html>

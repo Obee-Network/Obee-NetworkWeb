@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        BHD
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="baidu-site-verification" content="4kq7nyPohf">
+    <meta name="google-site-verification" content="aY-6F7u1aD-k7FKqtXq81slvf0Mc0JJb1Kxsz58V0TQ">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <link rel="shortcut icon" href="..\images\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="..\stylesheets\explorer_blockchains-f80bd80d2b.css">
+    <link rel="stylesheet" href="..\stylesheets\iconmoon.css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..\index.html">
+                <img alt="Brand" src="..\images\logo-hd90.png" class="bco-logoimg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="network.html">Network</a></li>
+                <li><a href="block.html">Blocks</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" onsubmit="return false;">
+                <div class="form-group">
+                    <input type="text" class="form-control bcoSearch" placeholder="block, transaction, plotter">
+                </div>
+                <button type="submit" class="btn btn-warning bcoSearchBtn">Search</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container mrt80">
+    <div id="blockChainMessage">
+        <h3 class="text-center" style="padding:100px 0;color: #999">
+            <img src="..\images\loading-0.gif" alt="BHD">
+        </h3>
+    </div>
+
+    <div class="clearfix">
+        <h2 class="chart-title"></h2>
+
+        <div id="networkCapacityLine" style="margin-bottom: 30px">
+            <h3 class="text-center" style="padding:100px 0;color: #999">
+                <img src="..\images\loading-0.gif" alt="BHD">
+            </h3>
+        </div>
+    </div>
+</div>
+
+<script src="..\js\jquery-3.2.1.min.js"></script>
+<script src="..\js\ejs.min.js"></script>
+<script src="..\js\moment.min.js"></script>
+<script src="..\js\transition.js"></script>
+<script src="..\js\collapse.js"></script>
+<script src="..\js\protocol.config.js"></script>
+<script src="..\js\search.js"></script>
+<script src="..\js\highcharts.js"></script>
+
+<script>
+    $(function () {
+        var current = {}, next = {};
+
+        getNetWork();
+
+        function getNetWork() {
+            $.ajax({
+                type: "get",
+                url: protocol + "network",
+                dataType: "JSON",
+                success: function (msg) {
+                    if (msg) {
+                        current.startHeight = msg.current.startHeight;
+                        current.ratio = msg.current.ratio;
+                        next.ratio = msg.next.ratio;
+                        next.capacity = msg.next.capacity;
+                        next.startHeight = msg.next.startHeight;
+
+                        $("#blockChainMessage").html(ejs.render($("#blockChainMessageModule").html(), {data: msg}));
+
+                        getNetworkCapacityData();
+                    } else {
+                        $("#blockChainMessage").html('<h3 style="text-align: center;padding-top: 6%;color: #999">block information<img src="/images/no-data.png" alt="BHD" style="vertical-align: text-bottom"></h3>')
+                    }
+                }, error: function () {
+                    $("#blockChainMessage").html('<h3 style="text-align: center;padding-top: 6%;color: #999">block information<img src="/images/error.png" alt="BHD" style="vertical-align: text-bottom"></h3>')
+                }
+            });
+        }
+
+        function getNetworkCapacityData() {
+            $.ajax({
+                type: "get",
+                url: "/explorer/api/capacity",
+                dataType: "JSON",
+                success: function (msg) {
+                    if (msg.data.length > 0) {
+                        formatLineData(msg.data, msg.end);
+                    } else {
+                        $("#networkCapacityLine").html('<h3 style="text-align: center;padding-top: 6%;color: #999">network capacity information<img src="/images/no-data.png" alt="BHD" style="vertical-align: text-bottom"></h3>')
+                    }
+                }, error: function () {
+                    $("#networkCapacityLine").html('<h3 style="text-align: center;padding-top: 6%;color: #999">network capacity information<img src="/images/error.png" alt="BHD" style="vertical-align: text-bottom"></h3>')
+                }
+            });
+        }
+
+        function formatLineData(data, end) {
+            var _ARRAY_ = [];
+            var FORCAST = [];
+
+            for (var i in data) {
+                var J = {};
+
+                if (i == data.length - 1) {
+                    var _ = data[data.length - 1];
+
+                    J.x = (_.time + (next.startHeight - end) * 300) * 1000;
+                    J.y = (_.capacity / 1024);
+                    J.description = 'Height:' + next['startHeight'];
+                    J.dataLabels = 'Ratio:' + next['ratio'] + ' BHD/TB';
+                    J.marker = {
+                        fillColor: '#f99320',
+                        lineColor: '#f99320',
+                        lineWidth: 4,
+                        enabled: true,
+                        symbol: 'circle',
+                    };
+
+                    FORCAST = FORCAST.concat(_ARRAY_[_ARRAY_.length - 1], J);
+                } else {
+                    if (data[i]['height'] === current['startHeight']) {
+                        J.x = data[i]['time'] * 1000;
+                        J.y = (data[i]['capacity'] / 1024);
+                        J.description = 'Height:' + current['startHeight'];
+                        J.dataLabels = 'Ratio:' + current['ratio'] + ' BHD/TB';
+                        J.marker = {
+                            fillColor: '#f99320',
+                            lineColor: '#f99320',
+                            lineWidth: 4,
+                            enabled: true,
+                            symbol: 'circle',
+                        };
+
+                        _ARRAY_.push(J);
+                    } else {
+                        J.x = data[i]['time'] * 1000;
+                        J.y = (data[i]['capacity'] / 1024);
+
+                        _ARRAY_.push(J);
+                    }
+                }
+            }
+
+            return line(_ARRAY_, FORCAST);
+        }
+
+        function line(data, forecast) {
+            $(".chart-title").html('Network Capacity');
+
+            var chart = Highcharts.chart('networkCapacityLine', {
+                chart: {
+                    zoomType: 'x',
+                    marginTop: 30
+                },
+                title: {
+                    text: null
+                },
+                tooltip: {
+                    valueDecimals: 2,
+                    valueSuffix: ' PB',
+//                        pointFormatter: function () {
+//                            if (this.options.dataLabels) {
+//                                return (this.options.description + '<br/>' + this.series.name + ':' + (this.options.y).toFixed(2) + ' PB' + '<br/>' + this.options.dataLabels);
+//                            } else {
+//                                return (moment(this.options.x).format('YYYY/MM/DD HH:mm:ss')+'<br/>'+this.series.name + ':' + (this.options.y).toFixed(2) + ' PB');
+//                            }
+//                        },
+                    formatter: function () {
+                        if (this.point.options.dataLabels) {
+                            return moment(this.x).format('YYYY/MM/DD HH:mm:ss') + '<br/>' +(this.point.options.description + '<br/>' + this.series.name + ':' + (this.y).toFixed(2) + ' PB' + '<br/>' + this.point.options.dataLabels);
+                        } else {
+                            return (moment(this.x).format('YYYY/MM/DD HH:mm:ss') + '<br/>' + this.series.name + ':' + (this.y).toFixed(2) + ' PB');
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: 'PB',
+                        rotation: 360,
+                        align: 'high'
+                    },
+                    min:0,
+                    max:2000
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickInterval: 24 * 3600 * 1000,
+                    dateTimeLabelFormats: {
+                        day: '%Y/%m/%d'
+                    }
+                },
+                legend: {
+                    enabled: false,
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                series: [{
+                    name: 'Network Capacity',
+                    data: data,
+                    turboThreshold: 5000,
+                    color: 'rgb(51,122,183)'
+                }, {
+                    name: 'Network Capacity',
+                    data: forecast,
+                    turboThreshold: 5000,
+                    dashStyle: 'dash',
+                    lineWidth: 1,
+                    color: '#f99320'
+                }],
+                responsive: {
+                    rules: [{
+                        condition: {
+                            maxWidth: 1000
+                        },
+                        chartOptions: {
+                            legend: {
+                                layout: 'horizontal',
+                                align: 'center',
+                                verticalAlign: 'bottom'
+                            }
+                        }
+                    }]
+                }
+            }, function (c) {
+                warningValue(c);
+
+                var A = c.series[1], pointsA = A.points, lastPointA = pointsA[pointsA.length - 1];
+
+                c.tooltip.shared = false;
+                c.tooltip.refresh(lastPointA);
+            })
+        }
+
+        var S = null;
+
+        function warningValue(params) {
+            if (S) {
+                S.destroy();
+            }
+
+            for (var i in (params.series[0].points)) {
+                if ((params.series[0].points)[i].description && ((params.series[0].points)[i].description).split(":")[1] == current.startHeight) {
+                    S = render(params, (params.series[0].points)[i], 'Current:')
+                }
+            }
+        }
+
+        function render(chart, point, text) {
+            return chart.renderer.label(text + '<br/>' + moment(point.x).format('YYYY/MM/DD HH:mm:ss') + '<br/>' + point.description + '<br/>' + 'Network Capacity:' + (point.y).toFixed(2) + ' PB<br/>' + point.options.dataLabels)
+                .css({
+                    color: '#eea236',
+                    align: 'center',
+                }).attr({
+                    fill: 'rgba(0, 0, 0, 0.5)',
+                    padding: 10,
+                    zIndex: 11,
+                    r: 4,
+                }).add();
+        }
+    });
+
+    function difficulty(number) {
+        var _number = 0;
+
+        if (number >= 1024) {
+            _number = (number / 1024).toFixed(2) + " PB";
+        } else {
+            _number = number.toFixed(2) + " TB";
+        }
+
+        return _number;
+    }
+</script>
+
+<script charset="UTF-8" type="text/template" id="blockChainMessageModule">
+    <div class="clearfix">
+        <h2>Best Block</h2>
+
+        <div class="table-responsive">
+            <table class="table my-block-table">
+                <tbody>
+                <tr>
+                    <th>Height:</th>
+                    <td> <%=data.best.height%></td>
+                </tr>
+                <tr>
+                    <th>Block Hash:</th>
+                    <td>
+                        <a href="/explorer/block/<%=data.best.hash%>"><%=data.best.hash%></a></td>
+                </tr>
+                <tr>
+                    <th>Time:</th>
+                    <td>
+                        <%=moment((data.best.time)*1000).format('YYYY/MM/DD HH:mm:ss')%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Transactions:</th>
+                    <td> <%=data.best.txCount%></td>
+                </tr>
+                <tr>
+                    <th>Previous Block Hash:</th>
+                    <td>
+                        <a href="/explorer/block/<%=data.best.previousblockhash%>"><%=data.best.previousblockhash%></a>
+                    </td>
+                </tr>
+                <%if(data.best.nextblockhash){%>
+                <tr>
+                    <th>Next Block Hash:</th>
+                    <td>
+                        <a href="/explorer/block/<%=data.best.nextblockhash%>"><%=data.best.nextblockhash%></a>
+                    </td>
+                </tr>
+                <%}%>
+                <tr>
+                    <th>Base Target:</th>
+                    <td><%=data.best.baseTarget%></td>
+                </tr>
+                <tr>
+                    <th>Nonce:</th>
+                    <td><%=data.best.nonce%></td>
+                </tr>
+                <tr>
+                    <th>Difficulty:</th>
+                    <td>
+                        <%=data.best.difficulty%>
+                        <span>[ <%=difficulty(data.best.difficulty*((data.best.height < 197568 ? 14660155037 : 24433591728))/parseInt('0x10000000000000000'))%> ]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>PlotterID:</th>
+                    <td><a href="/explorer/plotter/<%=data.best.plotterId%>">
+                        <%=data.best.plotterId%></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Deadline:</th>
+                    <td><%=data.best.deadline%>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Generator:</th>
+                    <td><a href="/explorer/address/<%=data.best.generator%>">
+                        <%=data.best.generator%></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Mining</h2>
+        <div class="table-responsive">
+            <table class="table my-block-table">
+                <tbody>
+                <tr>
+                    <th>Average Capacity:</th>
+                    <td><%=difficulty(data.evalCapacity)%></td>
+                </tr>
+                <tr>
+                    <th>Step Balance:</th>
+                    <td><%=data.stepBalance%> BHD</td>
+                </tr>
+                <tr>
+                    <th>Ratio:</th>
+                    <td> <%=data.ratio%> BHD / TB</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</script>
+</body>
+
+</html>

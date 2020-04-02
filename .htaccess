@@ -1,0 +1,41 @@
+#Do not show dir or file
+
+Options +FollowSymLinks
+
+<IfModule mod_expires.c>
+        ExpiresActive On
+
+        ExpiresByType image/jpeg A604800
+        ExpiresByType image/png A604800
+        ExpiresByType image/gif A604800
+
+        ExpiresByType application/javascript A31536400
+        ExpiresByType text/css A31536400
+		
+		ExpiresByType application/x-shockwave-flash A31536400
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch ".(eot|ttf|otf|woff)">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+
+
+#Rewrite Rule
+
+RewriteEngine On
+RewriteBase /
+
+# Don't rewrite real files or directories
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+
+#TP5
+RewriteRule ^(.*) index.php [L,E=PATH_INFO:$1]
+
+#ErrorDocument 404 /page_not_found.html
+
