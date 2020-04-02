@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        BHD 公告
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="baidu-site-verification" content="4kq7nyPohf">
+    <meta name="google-site-verification" content="aY-6F7u1aD-k7FKqtXq81slvf0Mc0JJb1Kxsz58V0TQ">
+
+    <link rel="shortcut icon" href="..\images\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="..\stylesheets\bootstrap.min.css">
+    <link rel="stylesheet" href="..\stylesheets\style.css">
+    <link rel="stylesheet" href="..\stylesheets\notice.css">
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm" href="..\cn.html"><img src="..\images\logo-hd156.png" alt="" width='90'></a>
+        </div>
+        <!--nav-->
+        <div class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="..\cn.html" class="">首页</a></li>
+                <li><a href="/explorer.html">区块浏览器</a></li>
+                <li role="presentation" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">白皮书<span class="caret"></span> </a>
+                    <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
+                        <li>
+                            <a href="..\BHD-Whitepaper-1.0_zh.pdf" target="_blank">
+                                BHD白皮书
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\BHD-MinerPool_Whitepaper-1.0_zh.pdf" target="_blank">
+                                矿池白皮书
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a data-scroll="" href="..\cn\index.html#wallet">钱包</a></li>
+                <li><a href="#" class="notice active">公告<span></span></a></li>
+                <li role="presentation" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中文<span class="caret"></span> </a>
+                    <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
+                        <li>
+                            <a href="..\index.html">
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\cn.html">
+                                中文
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\japan.html">
+                                日本語
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\Kr.html">
+                                한국어
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\russian.html">
+                                русский
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\vietnam.html">
+                                Tiếng việt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\es.html">
+                                Español
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\ger.html">
+                                Deutsch
+                            </a>
+                        </li>
+                        <li>
+                            <a href="..\tur.html">
+                                Türk dili
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h2 class="text-center crf99320 mrt80" style="margin-top: 100px" id="titles"></h2>
+<div class="container">
+   <div class="has-feedback">
+       <ul class="well" id="content">
+       </ul>
+       <div class="mask-paging">
+           <img src="..\images\loading-0.gif" alt="BHD">
+       </div>
+   </div>
+    <div class="text-center">
+    </div>
+</div>
+<!--go top-->
+<a href="javascript:void(0)" id="goToTop" class="bhd-top"></a>
+
+<script src="..\js\jquery-3.2.1.min.js"></script>
+<script src="..\js\ejs.min.js"></script>
+<script src="..\js\moment-with-locales.min.js"></script>
+<script src="..\js\crypto-js.js"></script>
+<script src="..\js\bootstrap-paginator.min.js"></script>
+<script src="..\js\transition.js"></script>
+<script src="..\js\dropdown.js"></script>
+<script src="..\js\collapse.js"></script>
+<script>
+    function getCaption(obj){
+
+        var index=obj.lastIndexOf("\=");
+        obj=obj.substring(index+1,obj.length);
+        return obj;
+    }
+    $(function ($) {
+        var url = document.location.href;
+        var ids = getCaption(url);
+        console.log(ids);
+        $.ajax({
+            type: "post",
+            url: "http://admin.obee.top/index/ajax/get_info?ids="+ids,
+            dataType: "JSONP",
+            success: function (msg) {
+                $('#titles').html(msg.title);
+                $('#content').html(msg.content);
+            }
+        });
+
+    });
+
+    function getAesString(data, key, iv) {
+        var key = CryptoJS.enc.Utf8.parse(key);
+        var iv = CryptoJS.enc.Utf8.parse(iv);
+        var encrypted = CryptoJS.AES.encrypt(data, key,
+            {
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7
+            });
+        return encrypted.toString();
+    }
+
+    function getAES(data) {
+        var key = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+        var iv = '1234567812345678';
+        var encrypted = getAesString(data, key, iv);
+        return encrypted;
+    }
+
+    jQuery.fn.goToTop = function () {
+        if ($(window).scrollTop() < 0) {
+            $('#goToTop').hide();
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1) {
+                $('#goToTop').fadeIn();
+            } else {
+                $('#goToTop').fadeOut();
+            }
+        });
+
+        this.bind('click', function () {
+            $('html ,body').animate({scrollTop: 0}, 500);
+            return false;
+        });
+    };
+</script>
+
+<script charset="UTF-8" type="text/template" id="announcementDomTmp">
+    <%data.forEach(function(m,n){%>
+    <li class="flex justify-space-between">
+        <a href="/announcement/content_zh.html?<%=getAES('id='+m._id)%>" class="flex-a-set"><%=m.title%></a>
+        <span class="flex-span-set"><em><%=moment(m.releaseTime).format('YYYY-MM-DD')%></em><i></i></span>
+    </li>
+    <%})%>
+</script>
+</body>
+
+</html>
