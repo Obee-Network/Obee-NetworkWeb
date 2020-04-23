@@ -95,11 +95,6 @@
 }
 
 @media (max-width: 1200px) {
-
-    .contentbox {
-        font-size: 
-    }
-
     .slogan {
         margin-top: 20%
     }
@@ -159,7 +154,7 @@
     }
 
     .wallet-download {
-        min-height: auto;
+        min-height: 250px;
     }
 
     .problem-solving-person h2 span:nth-of-type(1), .problem-solving-person h2 span:nth-of-type(3) {
@@ -248,16 +243,17 @@
         width: 32px;
     }
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         background: url(../images/FAQ-person@2.png) no-repeat left;
+        background: url(../images/FAQ-person.png) no-repeat left;
         padding-bottom: 16px;
         padding-top: 80px;
-    }
+    } */
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         margin: 20px 0;
         padding-left: 34%;
-    }
+    } */
 }
 
 @media (max-width: 992px) {
@@ -297,10 +293,16 @@
         z-index: -1;
     }
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         padding-left: 33%;
-    }
-
+    } */
+	.problem-solving-person {
+		background-image: none;
+	}
+	
+	.panel-group {
+		margin-left: 6%;
+	}
     .responsive-banner {
         /* min-height: 500px; */
         /* background: url(../images/ai-line.svg) no-repeat 0 -50px, url(../images/ai-line@180deg.svg) no-repeat bottom #011631; */
@@ -409,9 +411,9 @@
 }
 
 @media (max-width: 470px) {
-    .problem-solving-person {
+    /* .problem-solving-person {
         padding-left: 0;
-    }
+    } */
 
     .problem-solving-person h3 {
         text-align: center;
@@ -442,7 +444,7 @@
 
 @media (max-width: 415px) {
     .navbar-inverse {
-        background-color: #273143;
+        background-color: #337ab7;
     }
 
     .technical-parameter-body p {
@@ -494,11 +496,11 @@
         margin: 0 0 6px;
     }
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         padding-top: 0;
         min-height: auto;
         padding-left: 0;
-    }
+    } */
 
     .slogan {
         margin-top: 20%;
@@ -532,7 +534,7 @@
     }
 
     .wallet-download {
-        background-size: auto;
+        background-size: cover;
     }
 
     .problem-solving {
@@ -598,9 +600,9 @@
         font-size: 18px;
     }
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         padding-left: 0;
-    }
+    } */
 }
 
 @media (max-width: 320px) {
@@ -610,16 +612,16 @@
 
     .panel-title {
         font-size: 14px;
-    }
+        vertical-align: middle;
 
     .wallet-download {
         background-size: auto;
     }
 
-    .problem-solving-person {
+    /* .problem-solving-person {
         padding-top: 0;
         min-height: auto;
-    }
+    } */
 
     .problem-solving {
         padding-top: 30px;

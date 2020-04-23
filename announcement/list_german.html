@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        BHD Anzeige
+        OBEE Anzeige
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,26 +32,28 @@
         <!--nav-->
         <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-scroll="" href="#" class="">Startseite</a></li>
-                <li><a href="http://obee.vip" target="_blank">
+      
+                <li><a href="..\ger.html" title="Startseite">Startseite</a></li>
+                <li><a href="http://obee.vip" target="_blank" title="ObeeNetwork">
                 		ObeeNetwork
                     </a>
                 </li>
+				<li><a href="http://221.229.174.86:8005/" target="_blank" title="explorer">explorer</a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weißbuch<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Weißbuch">Weißbuch<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
-                            <a href="..\BHD-Whitepaper-1.0_ger.pdf" target="_blank">
+                            <a href="..\OBEE-Whitepaper-ger.pdf" target="_blank">
                                 OBEE Weißbuch
                             </a>
                         </li>
                    
                     </ul>
                 </li>
-                <li><a data-scroll="" href="..\ger.html#wallet">Anwendung</a></li>
-                <li><a href="/ger/ger-notice.html" class="notice active">Anzeige<span></span></a></li>
+                <li><a data-scroll="" href="..\ger.html#wallet" title="Anwendung">Anwendung</a></li>
+                <li><a href="/ger/ger-notice.html" class="notice active" title="Anzeige">Anzeige<span></span></a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deutsch<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Deutsch">Deutsch<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="..\index.html">
@@ -93,11 +95,7 @@
                                 Deutsch
                             </a>
                         </li>
-                        <li>
-                            <a href="..\tur.html">
-                                Türk dili
-                            </a>
-                        </li>
+                      
                     </ul>
                 </li>
             </ul>
@@ -142,7 +140,7 @@
 
             $.ajax({
                 type: "post",
-                url: "http://admin.obee.top/index/ajax/get_notice",
+                url: "http://admin.ceo-1.com/index/ajax/get_notice",
                 dataType: "JSONP",
                 data: {language: '8', limit: 20, skip: n},
                 success: function (msg) {
@@ -241,12 +239,24 @@
             return false;
         });
     };
+    
+    function timestampToTime(timestamp) {
+	    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+	    var Y = date.getFullYear() + '-';
+	    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+	    var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+	    var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+	    var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+	    var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+	    return Y+M+D;
+
+    };
 </script>
 
 <script charset="UTF-8" type="text/template" id="announcementDomTmp">
     <%data.forEach(function(m,n){%>
     <li class="flex justify-space-between">
-        <a href="/announcement/content_en.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
+        <a href="/announcement/content_german.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
         <span class="flex-span-set"><em><%=moment(m.releaseTime).format('YYYY-MM-DD')%></em><i></i></span>
     </li>
     <%})%>
