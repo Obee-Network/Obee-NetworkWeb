@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        BHD 公告
+        OBEE 公告
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,13 +32,14 @@
         <!--nav-->
         <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="..\cn.html" class="">首页</a></li>
-                <li><a href="http://obee.vip" target="_blank">
+                <li><a href="..\cn.html" class="" title="首页">首页</a></li>
+                <li><a href="http://obee.vip" target="_blank" title="ObeeNetwork">
                 		ObeeNetwork
                     </a>
                 </li>
+				<li><a href="http://221.229.174.86:8005/" target="_blank" title="区块浏览器">区块浏览器</a></li>
                <li role="presentation" class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">白皮书<span class="caret"></span> </a>
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="白皮书">白皮书<span class="caret"></span> </a>
                    <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                        <li>
                            <a href="..\OBEE-Whitepaper-cn.pdf" target="_blank">
@@ -48,10 +49,10 @@
                 
                    </ul>
                </li>
-                <li><a data-scroll="" href="..\cn.html#wallet">应用</a></li>
-                <li><a href="#" class="notice active">公告<span></span></a></li>
+                <li><a data-scroll="" href="..\cn.html#wallet" title="应用">应用</a></li>
+                <li><a href="#" class="notice active" title="公告">公告<span></span></a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中文<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="中文">中文<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="..\index.html">
@@ -91,11 +92,6 @@
                         <li>
                             <a href="..\ger.html">
                                 Deutsch
-                            </a>
-                        </li>
-                        <li>
-                            <a href="..\tur.html">
-                                Türk dili
                             </a>
                         </li>
                     </ul>
@@ -142,11 +138,12 @@
 
             $.ajax({
                 type: "post",
-                url: "http://admin.obee.top/index/ajax/get_notice",
+                url: "http://admin.ceo-1.com/index/ajax/get_notice",
                 dataType: "JSONP",
                 data: {language: '2', limit: 20, skip: n},
                 success: function (msg) {
                     if (ONETIME === 0) {
+                    	console.log(msg)
                         msg.count > 0 && initPaging(msg.count);
 
                         ONETIME++;
@@ -241,13 +238,25 @@
             return false;
         });
     };
+        function timestampToTime(timestamp) {
+	    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+	    var Y = date.getFullYear() + '-';
+	    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+	    var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+	    var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+	    var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+	    var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+	    return Y+M+D;
+
+    };
+    
 </script>
 
 <script charset="UTF-8" type="text/template" id="announcementDomTmp">
     <%data.forEach(function(m,n){%>
     <li class="flex justify-space-between">
         <a href="/announcement/content.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
-        <span class="flex-span-set"><em><%=moment(m.releaseTime).format('YYYY-MM-DD')%></em><i></i></span>
+        <span class="flex-span-set"><em><%=timestampToTime(m.createtime)%></em><i></i></span>
     </li>
     <%})%>
 </script>
