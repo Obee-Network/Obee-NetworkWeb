@@ -1,0 +1,560 @@
+Uri: https://btchd.org/
+File Name: E:\网站模板\bch\btchd.org\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/stylesheets/bootstrap.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\bootstrap.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/aos.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\aos.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/style.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\style.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/media_query.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\media_query.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/responsive-timeline.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\responsive-timeline.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/iconmoon.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\iconmoon.css
+Content Type: text/css
+
+Uri: https://btchd.org/images/favicon.png
+File Name: E:\网站模板\bch\btchd.org\images\favicon.png
+Content Type: image/png
+
+Uri: https://btchd.org/BHD-Whitepaper2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-MinerPool_Whitepaper-1.0_en.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-MinerPool_Whitepaper-1.0_en.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/announcement/list_en.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_en.html
+Content Type: text/html
+
+Uri: https://btchd.org/cn
+File Name: E:\网站模板\bch\btchd.org\cn.html
+Content Type: text/html
+
+Uri: https://btchd.org/japan
+File Name: E:\网站模板\bch\btchd.org\japan.html
+Content Type: text/html
+
+Uri: https://btchd.org/Kr
+File Name: E:\网站模板\bch\btchd.org\Kr.html
+Content Type: text/html
+
+Uri: https://btchd.org/russian
+File Name: E:\网站模板\bch\btchd.org\russian.html
+Content Type: text/html
+
+Uri: https://btchd.org/vietnam
+File Name: E:\网站模板\bch\btchd.org\vietnam.html
+Content Type: text/html
+
+Uri: https://btchd.org/es
+File Name: E:\网站模板\bch\btchd.org\es.html
+Content Type: text/html
+
+Uri: https://btchd.org/ger
+File Name: E:\网站模板\bch\btchd.org\ger.html
+Content Type: text/html
+
+Uri: https://btchd.org/tur
+File Name: E:\网站模板\bch\btchd.org\tur.html
+Content Type: text/html
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-win64.zip
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-win64.zip
+Content Type: application/zip
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-win32.zip
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-win32.zip
+Content Type: application/zip
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-x86_64-linux-gnu.tar.gz
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-x86_64-linux-gnu.tar.hxd
+Content Type: application/octet-stream
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-aarch64-linux-gnu.tar.gz
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-aarch64-linux-gnu.tar.hxd
+Content Type: application/octet-stream
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-arm-linux-gnueabihf.tar.gz
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-arm-linux-gnueabihf.tar.hxd
+Content Type: application/octet-stream
+
+Uri: https://btchd.org/package/bhd-v1.3.6.0-3a08a92-osx.dmg
+File Name: E:\网站模板\bch\btchd.org\package\bhd-v1.3.6.0-3a08a92-osx.dmg
+Content Type: application/x-apple-diskimage
+
+Uri: https://btchd.org/images/logo-hd90.png
+File Name: E:\网站模板\bch\btchd.org\images\logo-hd90.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/1.png
+File Name: E:\网站模板\bch\btchd.org\images\1.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/2.png
+File Name: E:\网站模板\bch\btchd.org\images\2.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/3.png
+File Name: E:\网站模板\bch\btchd.org\images\3.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/4.png
+File Name: E:\网站模板\bch\btchd.org\images\4.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/5.png
+File Name: E:\网站模板\bch\btchd.org\images\5.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/6.png
+File Name: E:\网站模板\bch\btchd.org\images\6.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/green.png
+File Name: E:\网站模板\bch\btchd.org\images\green.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/threshold.png
+File Name: E:\网站模板\bch\btchd.org\images\threshold.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/centralization.png
+File Name: E:\网站模板\bch\btchd.org\images\centralization.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/blocks.png
+File Name: E:\网站模板\bch\btchd.org\images\blocks.png
+Content Type: image/png
+
+Uri: https://btchd.org/media/bhd-v1.1-2b44a990.mp4
+File Name: E:\网站模板\bch\btchd.org\media\bhd-v1.1-2b44a990.mp4
+Content Type: video/mp4
+
+Uri: https://btchd.org/images/parameter.png
+File Name: E:\网站模板\bch\btchd.org\images\parameter.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/arithmetic_icon.png
+File Name: E:\网站模板\bch\btchd.org\images\arithmetic_icon.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/community.png
+File Name: E:\网站模板\bch\btchd.org\images\community.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/team-person.png
+File Name: E:\网站模板\bch\btchd.org\images\team-person.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/windows.png
+File Name: E:\网站模板\bch\btchd.org\images\windows.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/linux.png
+File Name: E:\网站模板\bch\btchd.org\images\linux.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/ios.png
+File Name: E:\网站模板\bch\btchd.org\images\ios.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/huobi.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\huobi.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/BitMart.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\BitMart.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/CoinNeal.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\CoinNeal.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/AEX.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\AEX.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/BJEX.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\BJEX.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/mxc.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\mxc.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/bitmax.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\bitmax.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/hotbit.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\hotbit.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/ixx.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\ixx.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/bhex.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\bhex.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/Bithumb.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\Bithumb.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/coinall.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\coinall.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/trade/cashieerst.png
+File Name: E:\网站模板\bch\btchd.org\images\trade\cashieerst.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/logo-hd156.png
+File Name: E:\网站模板\bch\btchd.org\images\logo-hd156.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/yx.png
+File Name: E:\网站模板\bch\btchd.org\images\yx.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/tt.png
+File Name: E:\网站模板\bch\btchd.org\images\tt.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/ChainNode.png
+File Name: E:\网站模板\bch\btchd.org\images\ChainNode.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/telegraph.png
+File Name: E:\网站模板\bch\btchd.org\images\telegraph.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/wx.png
+File Name: E:\网站模板\bch\btchd.org\images\wx.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/Linkedin.png
+File Name: E:\网站模板\bch\btchd.org\images\Linkedin.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/code.jpg
+File Name: E:\网站模板\bch\btchd.org\images\code.jpg
+Content Type: image/jpeg
+
+Uri: https://btchd.org/images/bhd-community.jpg
+File Name: E:\网站模板\bch\btchd.org\images\bhd-community.jpg
+Content Type: image/jpeg
+
+Uri: https://btchd.org/js/jquery-3.2.1.min.js
+File Name: E:\网站模板\bch\btchd.org\js\jquery-3.2.1.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/smooth-scroll.polyfills.min.js
+File Name: E:\网站模板\bch\btchd.org\js\smooth-scroll.polyfills.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/aos.js
+File Name: E:\网站模板\bch\btchd.org\js\aos.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/transition.js
+File Name: E:\网站模板\bch\btchd.org\js\transition.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/collapse.js
+File Name: E:\网站模板\bch\btchd.org\js\collapse.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/dropdown.js
+File Name: E:\网站模板\bch\btchd.org\js\dropdown.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/images/foot-line.svg
+File Name: E:\网站模板\bch\btchd.org\images\foot-line.svg
+Content Type: image/svg+xml
+
+Uri: https://btchd.org/images/arr.png
+File Name: E:\网站模板\bch\btchd.org\images\arr.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/ai-line.svg
+File Name: E:\网站模板\bch\btchd.org\images\ai-line.svg
+Content Type: image/svg+xml
+
+Uri: https://btchd.org/images/ai-line@180deg.svg
+File Name: E:\网站模板\bch\btchd.org\images\ai-line@180deg.svg
+Content Type: image/svg+xml
+
+Uri: https://btchd.org/images/banner-about.png
+File Name: E:\网站模板\bch\btchd.org\images\banner-about.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/sketch5.png
+File Name: E:\网站模板\bch\btchd.org\images\sketch5.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/sketch4.png
+File Name: E:\网站模板\bch\btchd.org\images\sketch4.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/sketch3.png
+File Name: E:\网站模板\bch\btchd.org\images\sketch3.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/sketch1.png
+File Name: E:\网站模板\bch\btchd.org\images\sketch1.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/FAQ-person.png
+File Name: E:\网站模板\bch\btchd.org\images\FAQ-person.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/download-banner.png
+File Name: E:\网站模板\bch\btchd.org\images\download-banner.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/FAQ-person@2.png
+File Name: E:\网站模板\bch\btchd.org\images\FAQ-person@2.png
+Content Type: image/png
+
+Uri: https://btchd.org/font/icomoon.eot?ijrbjm
+File Name: E:\网站模板\bch\btchd.org\font\icomoon.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://btchd.org/font/icomoon.ttf?ijrbjm
+File Name: E:\网站模板\bch\btchd.org\font\icomoon.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://btchd.org/font/icomoon.woff?ijrbjm
+File Name: E:\网站模板\bch\btchd.org\font\icomoon.woff
+Content Type: application/font-woff
+
+Uri: https://btchd.org/font/icomoon.svg?ijrbjm
+File Name: E:\网站模板\bch\btchd.org\font\icomoon.svg
+Content Type: image/svg+xml
+
+Uri: https://btchd.org/explorer/
+File Name: E:\网站模板\bch\btchd.org\explorer\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/stylesheets/bootstrap.min.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://btchd.org/stylesheets/notice.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\notice.css
+Content Type: text/css
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_en.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_en.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/images/loading-0.gif
+File Name: E:\网站模板\bch\btchd.org\images\loading-0.gif
+Content Type: image/gif
+
+Uri: https://btchd.org/js/ejs.min.js
+File Name: E:\网站模板\bch\btchd.org\js\ejs.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/moment-with-locales.min.js
+File Name: E:\网站模板\bch\btchd.org\js\moment-with-locales.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/crypto-js.js
+File Name: E:\网站模板\bch\btchd.org\js\crypto-js.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/bootstrap-paginator.min.js
+File Name: E:\网站模板\bch\btchd.org\js\bootstrap-paginator.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/BHD-白皮书2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-白皮书2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-MinerPool_Whitepaper-1.0_zh.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-MinerPool_Whitepaper-1.0_zh.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/cn/
+File Name: E:\网站模板\bch\btchd.org\cn\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_zh.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_zh.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-ホワイトペーパー2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-ホワイトペーパー2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/announcement/list_japanese.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_japanese.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-백서2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-백서2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/announcement/list_korean.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_korean.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-Белаябумага2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Белаябумага2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/russian/
+File Name: E:\网站模板\bch\btchd.org\russian\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_russian.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_russian.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-Giấytrắng2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Giấytrắng2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/vietnam/
+File Name: E:\网站模板\bch\btchd.org\vietnam\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_vietnamese.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_vietnamese.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-Whitepaper-ES2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-ES2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/es/
+File Name: E:\网站模板\bch\btchd.org\es\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_spanish.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_spanish.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-Weißbuch2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Weißbuch2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/ger/
+File Name: E:\网站模板\bch\btchd.org\ger\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_german.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_german.html
+Content Type: text/html
+
+Uri: https://btchd.org/BHD-BeyazKağıt2.0.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-BeyazKağıt2.0.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/tur/
+File Name: E:\网站模板\bch\btchd.org\tur\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/announcement/list_turkish.html
+File Name: E:\网站模板\bch\btchd.org\announcement\list_turkish.html
+Content Type: text/html
+
+Uri: https://btchd.org/stylesheets/explorer-0ba73ed09c.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\explorer-0ba73ed09c.css
+Content Type: text/css
+
+Uri: https://btchd.org/explorer/network
+File Name: E:\网站模板\bch\btchd.org\explorer\network.html
+Content Type: text/html
+
+Uri: https://btchd.org/explorer/block
+File Name: E:\网站模板\bch\btchd.org\explorer\block.html
+Content Type: text/html
+
+Uri: https://btchd.org/js/protocol.config.js
+File Name: E:\网站模板\bch\btchd.org\js\protocol.config.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/search.js
+File Name: E:\网站模板\bch\btchd.org\js\search.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/js/moment.min.js
+File Name: E:\网站模板\bch\btchd.org\js\moment.min.js
+Content Type: application/javascript
+
+Uri: https://btchd.org/images/right-normal.png
+File Name: E:\网站模板\bch\btchd.org\images\right-normal.png
+Content Type: image/png
+
+Uri: https://btchd.org/images/right-active.png
+File Name: E:\网站模板\bch\btchd.org\images\right-active.png
+Content Type: image/png
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_zh.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_zh.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_JPN.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_JPN.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_Kr.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_Kr.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/Kr/
+File Name: E:\网站模板\bch\btchd.org\Kr\index.html
+Content Type: text/html
+
+Uri: https://btchd.org/BitcoinHDБелая-бумага.pdf
+File Name: E:\网站模板\bch\btchd.org\BitcoinHDБелая-бумага.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_vietnam.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_vietnam.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_ES.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_ES.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_ger.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_ger.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/BHD-Whitepaper-1.0_tur.pdf
+File Name: E:\网站模板\bch\btchd.org\BHD-Whitepaper-1.0_tur.pdf
+Content Type: application/pdf
+
+Uri: https://btchd.org/images/right_arrow.png
+File Name: E:\网站模板\bch\btchd.org\images\right_arrow.png
+Content Type: image/png
+
+Uri: https://btchd.org/stylesheets/explorer_blockchains-f80bd80d2b.css
+File Name: E:\网站模板\bch\btchd.org\stylesheets\explorer_blockchains-f80bd80d2b.css
+Content Type: text/css
+
+Uri: https://btchd.org/js/highcharts.js
+File Name: E:\网站模板\bch\btchd.org\js\highcharts.js
+Content Type: application/javascript
+

@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        BHD Заметить
+        OBEE Заметить
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,13 +32,14 @@
         <!--nav-->
         <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="..\russian.html">Главная страница</a></li>
-                <li><a href="http://obee.vip" target="_blank">
+                <li><a href="..\russian.html" title="Главная страница">Главная страница</a></li>
+                <li><a href="http://obee.vip" target="_blank" title="ObeeNetwork">
                 		ObeeNetwork
                     </a>
                 </li>
+				<li><a href="http://221.229.174.86:8005/" target="_blank" title="Просмотреть блоки">Просмотреть блоки</a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Белая книга<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Белая книга">Белая книга<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="..\obee-whitepaper-ru.pdf" target="_blank">
@@ -48,11 +49,11 @@
                      
                     </ul>
                 </li>
-                <li><a data-scroll="" href="..\russian.html#wallet">применение</a></li>
-                <li><a href="#" class="notice">Информационные сообщения<span></span></a>
+                <li><a data-scroll="" href="..\russian.html#wallet" title="применение">применение</a></li>
+                <li><a href="#" class="notice" title="Информационные сообщения">Информационные сообщения<span></span></a>
                 </li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">русский<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="русский">русский<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="..\index.html">
@@ -94,11 +95,7 @@
                                 Deutsch
                             </a>
                         </li>
-                        <li>
-                            <a href="..\tur.html">
-                                Türk dili
-                            </a>
-                        </li>
+                       
                     </ul>
                 </li>
             </ul>
@@ -143,7 +140,7 @@
 
             $.ajax({
                 type: "post",
-                url: "http://admin.obee.top/index/ajax/get_notice",
+                url: "http://admin.ceo-1.com/index/ajax/get_notice",
                 dataType: "JSONP",
                 data: {language: '5', limit: 20, skip: n},
                 success: function (msg) {
@@ -242,13 +239,25 @@
             return false;
         });
     };
+    
+        function timestampToTime(timestamp) {
+	    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+	    var Y = date.getFullYear() + '-';
+	    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+	    var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+	    var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+	    var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+	    var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+	    return Y+M+D;
+
+    };
 </script>
 
 <script charset="UTF-8" type="text/template" id="announcementDomTmp">
     <%data.forEach(function(m,n){%>
     <li class="flex justify-space-between">
-        <a href="/announcement/content_en.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
-        <span class="flex-span-set"><em><%=moment(m.releaseTime).format('YYYY-MM-DD')%></em><i></i></span>
+        <a href="/announcement/content_russian.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
+        <span class="flex-span-set"><em><%=timestampToTime(m.createtime)%></em><i></i></span>
     </li>
     <%})%>
 </script>

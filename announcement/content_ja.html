@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        BHD お知らせ
+        OBEE お知らせ
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,22 +32,27 @@
         <!--nav-->
         <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="..\japan.html" class="">ホーム</a></li>
-                <li><a href="/explorer.html">ブロックチェーン エクスプローラー</a></li>
+                <li><a href="..\japan.html" class="" title="ホーム">ホーム</a></li>
+                <li><a href="http://obee.vip" target="_blank">
+                		ObeeNetwork
+                    </a>
+                </li>
+                <li><a href="http://221.229.174.86:8005/" target="_blank">ブロックチェーン エクスプローラー</a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ホワイトペーパー<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ブロックチェーン エクスプローラー<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel" style="min-width: 165px">
                         <li>
-                            <a href="..\BHD-Whitepaper-1.0_JPN.pdf" target="_blank">
-                                BHD白書
+                            <a href="..\OBEE-Whitepaper-JP.pdf" target="_blank">
+                                OBEE 白書
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li><a data-scroll="" href="..\japan.html#wallet">ウォレット</a></li>
-                <li><a href="#" class="notice active">お知らせ<span></span></a></li>
+                <li><a data-scroll="" href="..\japan.html#wallet" title="適用">適用</a></li>
+                <li><a href="#" class="notice active" title="お知らせ">お知らせ<span></span></a></li>
+         
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">日本語<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="日本語">日本語<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="..\index.html">
@@ -136,7 +141,7 @@
         console.log(ids);
         $.ajax({
             type: "post",
-            url: "http://admin.obee.top/index/ajax/get_info?ids="+ids,
+            url: "http://admin.ceo-1.com/index/ajax/get_info?ids="+ids,
             dataType: "JSONP",
             success: function (msg) {
                 $('#titles').html(msg.title);

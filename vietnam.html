@@ -18,24 +18,64 @@
     <link rel="stylesheet" href="stylesheets\responsive-timeline.css">
     <link rel="stylesheet" href="stylesheets\iconmoon.css">
     <link rel="shortcut icon" href="images\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="stylesheet" media="screen and (max-width:576px)" href="stylesheets/index-min.css" />
+    <style>
+        .timeline_new img,.timeline-wrap img{
+            
+            width: 90%;
+        }
+        .timeline_new{
+            text-align: center;
+                display: none;
+            }
+            .timeline-wrap{
+                text-align: center;
+                display: block;
+            }
+        @media screen and (max-width:768px){
+            .timeline_new{
+                display: block;
+            }
+            .timeline-wrap{
+                display: none;
+            }
+        }
+    </style>
     <!--[if lt IE 9]><p>Your browser is too low. Please upgrade your browser for a better experience!<p><![endif]-->
+    <script src='prefixfree.min.js'></script>
 </head>
 
 <body>
+<div class="loading-box">
+    <div class="loading">
+        <cube>
+            <back></back>
+            <bottom></bottom>
+            <front></front>
+            <left></left>
+            <right></right>
+            <top></top>
+        </cube>
+    </div>
+</div>
 <!--nav-->
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            
             <a class="navbar-brand hidden-sm" href="index.html"><img src="images\logo-hd90.png" alt=""></a>
         </div>
         <!--nav-->
         <div class="navbar-collapse collapse" role="navigation">
+            <i aria-label="图标: menu" class="anticon anticon-menu">
+                <svg viewBox="64 64 896 896" focusable="false" class=""
+                    data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+                    </path>
+                </svg>
+            </i>
             <ul class="nav navbar-nav en-web-nav navbar-right">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="http://obee.vip" target="_blank">
@@ -46,17 +86,16 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giấy trắng<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
-                            <a href="OBEE-Whitepaper-vn.pdf" target="_blank">
-                                OBEE Giấy trắng
+                            <a href="OBEE-Whitepaper-en.pdf" target="_blank">
+                               OBEE Giấy trắng
                             </a>
                         </li>
-                      
                     </ul>
                 </li>
                 <li><a data-scroll="" href="#wallet">Ứng dụng</a></li>
-                <li><a href="announcement\list_vietnamese.html" class="notice">Thông báo<span></span></a></li>
+                <li><a href="announcement\list_en.html" class="notice">Thông báo<span></span></a></li>
                 <li role="presentation" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tiếng việt<span class="caret"></span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span> </a>
                     <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
                         <li>
                             <a href="index.html">
@@ -98,7 +137,7 @@
                                 Deutsch
                             </a>
                         </li>
-                       
+                    
                     </ul>
                 </li>
             </ul>
@@ -190,11 +229,12 @@
 </div>
 
 <div class="banner-about">
+
     <div class="container" id="about">
         <div class="banner-about-bg">
 			<div class="null" style="height: 25px;">
 			</div>
-            <h2 class="text-center crf99320"><span></span><span> Giới thiệu về mạng Obee</span><span></span></h2>
+            <h2 class="text-center crf99320"><span></span><span> Giới thiệu về mạng Obee </span><span></span></h2>
             <div class="row en-web">
                 <div class="media">
                     <div class="media-left">
@@ -234,7 +274,7 @@
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading line-h30px">
-                          Quản lý là một cách khai thác mới bằng chứng công việc</h5>
+                             Quản lý là một cách khai thác mới bằng chứng công việc</h5>
                     </div>
                 </div>
                 <div class="media">
@@ -264,124 +304,165 @@
 
 </div>
 
-
 <div class="contentbox">
-  <div class="qcontainer">
-      <div class="film">
-          <div class="face front"><img src="./images/01t.png"></div>
-         <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">
-         			  <div class="null" style="height: 150px;">
-         			  </div>
-         			   <h5 class="text-center"><font size="4">Bằng chứng mới về phương pháp làm việc, chi phí khai thác thấp hơn</font></h5>
-         			  </div>
-      </div>
-  </div>
-  <div class="qcontainer">
-      <div class="film">
-          <div class="face front"><img src="./images/02t.png"></div>
-          <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">
-          			  <div class="null" style="height: 150px;">
-          			  </div>
-          			   <h5 class="text-center"><font size="4"> Sử dụng mã hóa bằng chứng không kiến thức để làm cho obee ẩn danh hơn</font></h5>
-          			  </div>
-      </div>
-  </div>
-  <div class="qcontainer">
-      <div class="film">
-          <div class="face front"><img src="./images/03t.png"></div>
-          <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">
-          			  <div class="null" style="height: 150px;">
-          			  </div>
-          			   <h5 class="text-center"><font size="4">Ngưỡng thấp, mọi người đều có thể tham gia khai thác</font></h5>
-          			  </div>
-      </div>
-  </div>
-  <div class="qcontainer">
-      <div class="film">
-          <div class="face front"><img src="./images/04t.png"></div>
-          <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">
-          			  <div class="null" style="height: 150px;">
-          			  </div>
-          			   <h5 class="text-center"><font size="4">Đạt được ứng dụng hạ cánh tốt hơn của mã thông báo obee</font></h5>
-          			  </div>
-      </div>
-  </div>
+	<div style="width: 100%;">
+		<div class="jq22-content">
+				<div class="flip-3d">
+				  <figure>
+				    <img src="img/1.jpg" alt="">
+				    <figcaption>Bằng chứng mới về phương pháp làm việc, chi phí khai thác thấp hơn</figcaption>
+					</figure>
+				</div>
+				  
+				<div class="flip-3d">
+				  <figure>
+				    <img src="img/2.jpg" alt="">
+				    <figcaption>Sử dụng mã hóa bằng chứng không kiến thức để làm cho obee ẩn danh hơn</figcaption>
+				  </figure>
+				</div>
+				<div class="flip-3d">
+				  <figure>
+				    <img src="img/3.jpg" alt="">
+				    <figcaption>Ngưỡng thấp, mọi người đều có thể tham gia khai thác</figcaption>
+				  </figure>
+				</div>
+				<div class="flip-3d">
+				  <figure>
+				    <img src="img/3.jpg" alt="">
+				    <figcaption>Đạt được ứng dụng hạ cánh tốt hơn của mã thông báo obee</figcaption>
+				  </figure>
+				</div>
+		</div>
+	</div>
+<!--  <div class="qcontainer">-->
+<!--      <div class="film">-->
+<!--          <div class="face front"><img src="./images/01t.png"></div>-->
+    <!--      <div class="face back">
+<!--			  <div class="null" style="height: 150px;">-->
+<!--			  </div>-->
+<!--			   <h5 class="text-center"><font size="4"> proof of work method<br></font></h5>-->
+<!--			   <div class="null" style="height: 15px;">-->
+<!--			   </div>-->
+<!--			   <h5 class="text-center"><font size="4">lower mining costs</font></h5>-->
+<!--			  </div> -->
+<!--			  <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">-->
+<!--			  			  <div class="null" style="height: 150px;">-->
+<!--			  			  </div>-->
+<!--			  			   <h5 class="text-center"><font size="4"> New proof of work method, lower mining costs</font></h5>-->
+<!--			  			  </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--  <div class="qcontainer">-->
+<!--      <div class="film">-->
+<!--          <div class="face front"><img src="./images/02t.png"></div>-->
+<!--					  <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">-->
+<!--					  			  <div class="null" style="height: 150px;">-->
+<!--					  			  </div>-->
+<!--					  			   <h5 class="text-center"><font size="4"> Use zero-knowledge proof encryption to make obee anonymous</font></h5>-->
+<!--					  			  </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--  <div class="qcontainer">-->
+<!--      <div class="film">-->
+<!--          <div class="face front"><img src="./images/03t.png"></div>-->
+<!--					  <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">-->
+<!--					  			  <div class="null" style="height: 150px;">-->
+<!--					  			  </div>-->
+<!--					  			   <h5 class="text-center"><font size="4"> Everyone can participate in mining with low threshold</font></h5>-->
+<!--					  			  </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--  <div class="qcontainer">-->
+<!--      <div class="film">-->
+<!--          <div class="face front"><img src="./images/04t.png"></div>-->
+<!--					  <div class="face back" style="width: 300px; line-height: 30px; padding: 0 1.5em;">-->
+<!--					  			  <div class="null" style="height: 150px;">-->
+<!--					  			  </div>-->
+<!--					  			   <h5 class="text-center"><font size="4"> To achieve better landing application of obee tokens</font></h5>-->
+<!--					  			  </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="container technical" id="time-table">-->
+<!--    <div class="technical-parameter-1">-->
+<!--        <h3><img src="images\parameter.png" alt="OBEE"> Basic parameters:</h3>-->
+
+<!--        <div class="technical-parameter-body">-->
+<!--            <p>Supply: 30 billion</p>-->
+<!--            <p>Operation team: 1.5 billion (5%)</p>-->
+<!--            <p>Development team: 1.5 billion (5%)</p>-->
+<!--            <p>Community reward: 6 billion (20%)</p>-->
+<!--            <p>After the main network is launched, the obee coin of some developers </p>-->
+<!--            <p>will be destroyed according to a certain percentage.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="technical-parameter-2">-->
+<!--        <div class="mining-algorithm">-->
+<!--            <h3><img src="images\arithmetic_icon.png" alt="OBEE"> Mining algorithm</h3>-->
+
+<!--            <div class="mining-algorithm-body">-->
+<!--                <p>Proof of comment</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="team-show" id="community">-->
+<!--            <h3><img src="images\community.png" alt="OBEE"> community</h3>-->
+
+<!--            <div class="text-center">-->
+<!--                <img src="images\team-person.png" alt="OBEE">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
-<div class="container technical" id="time-table">
-    <div class="technical-parameter-1">
-        <h3><img src="images\parameter.png" alt="OBEE">Thông số cơ bản</h3>
 
-        <div class="technical-parameter-body">
-            <p>Cung: 30 tỷ</p>
-            <p>Đội ngũ vận hành: 1,5 tỷ (5%)</p>
-            <p>Nhóm phát triển: 1,5 tỷ (5%)</p>
-            <p>Phần thưởng cộng đồng: 6 tỷ (20%)</p>
-            <p>Sau khi mạng chính được khởi chạy,obee trong  </p>
-            <p>một số hoạt động của cộng đồng coin sẽ bị hủy </p>
-			<p>theo một tỷ lệ nhất định </p>
+
+
+<!-- 3D 轮播 -->
+<div class="swiper">
+    <div id="gla">
+        <div id="gla_box">
+            <ul>
+            </ul>
         </div>
     </div>
-    <div class="technical-parameter-2">
-        <div class="mining-algorithm">
-            <h3><img src="images\arithmetic_icon.png" alt="OBEE">Thuật toán khai thác</h3>
+</div>
 
-            <div class="mining-algorithm-body">
-                <p>Nhận xét đang khai thác (Bằng chứng nhận xét)</p>
-            </div>
-        </div>
-        <div class="team-show" id="community">
-            <h3><img src="images\community.png" alt="OBEE"> Cộng </h3>
 
-            <div class="text-center">
-                <img src="images\team-person.png" alt="OBEE">
-            </div>
+<!--Download-->
+<div class="problem-solving" id="wallet" style="margin-top:-100px;">
+    <div class="container">
+        <div class="wallet-download">
+			<div class="null" >
+                <p>文字区域</p>
+                <p>
+                    <a href="javascript:;">链接一</a>
+                    <a href="javascript:;">链接一</a>
+                    <a href="javascript:;">链接一</a>
+                </p>
+			</div>
         </div>
     </div>
 </div>
 
 
 <div class="timeline_new">
-  <h1 class='header'>点滴努力大事件</h1>
-  <div class="event_wrap clearfix">
-    <div class="middle_line">					
-    </div>			
-  </div>
-</div>
-
-<!--Download-->
-<div class="problem-solving" id="wallet">
-    <div class="container">
-        <div class="wallet-download">
-			<div class="null" style="height: 25px;">
-			</div>
-            <!-- <h2 class="text-center">Full node wallet download</h2>
-            <p>
-                Updated date: 2019-10-28<br>
-                Version：v1.3.6<br>
-            </p> -->
-			<div class="null" style="height: 250px;">
-			</div>
-           <div class="download-normal">
-                <div class="download-system" align="center">
-                    <img src="images\Download.png" alt="OBEE"> 
-                    <hr style="border-top:1px solid #aa007f">
-                </div>
-                <div class="clearfix" align="center">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
-                        <a class="btn btn-lg"  href="package\ObeeNetwork.apk" download="">
-                            Android
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h1 class='header'></h1>
+    <div class="event_wrap clearfix">
+          <img src="images/timeline2.png" alt="">
     </div>
-</div>
+  </div>
+  
+  <div class="timeline-wrap">
+      <h2 class="header"></h2>
+      <div class="timeline">
+          <img src="images/timeline.png" alt="">
+      </div>
+  </div>
 <!--FAQ-->
 <div class="container">
     <div class="problem-solving-person">
-        <h2 class="crf99320"><span></span><span>Một số câu hỏi và câu trả lời về Obee Network</span><span></span></h2>
+		<h2 class="crf99320"><span></span><span>Một số câu hỏi và câu trả lời về Obee Network</span><span></span></h2>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default aos-init" aos="fade-right" aos-once="true">
                 <div class="panel-heading" role="tab" id="headingOne">
@@ -421,8 +502,7 @@
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
-                        <b>A3:&nbsp;</b>  Obee Network sẽ xây dựng một đội ngũ hoàn thiện và mạnh mẽ hơn. Mọi người đều được chào đón tham gia.
- to join.
+                        <b>A3:&nbsp;</b>   Obee Network sẽ xây dựng một đội ngũ hoàn thiện và mạnh mẽ hơn. Mọi người đều được chào đón tham gia.
                     </div>
                 </div>
             </div>
@@ -437,7 +517,6 @@
                 <div id="collapseFoure" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="panel-body">
                         <b>A4:&nbsp;</b>Obee Network sẽ lập bản đồ mạng chính trước quý 3 năm 2020.
-
                     </div>
                 </div>
             </div>
@@ -572,7 +651,8 @@
 <!--go top-->
 <a href="javascript:void(0)" id="toTop" class="bhd-top"></a>
 
-<script src="js\jquery-3.2.1.min.js"></script>
+<!-- <script src="js\jquery-3.2.1.min.js"></script> -->
+<script src="libs/jquery-1.7.2.min.js"></script>
 <script src="js\smooth-scroll.polyfills.min.js"></script>
 <script src="js\aos.js"></script>
 <script src="js\transition.js"></script>
@@ -581,91 +661,12 @@
 <script src="js/vendors.js"></script> 
 <script src="js/index.js"></script>
 <script src='js/jquery.eventFlow.js'></script>
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        offset: 100
-    });
 
-    AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
-    });
 
-    $(function ($) {
-        var toTop = $('#toTop');
-
-        toTop.on('click', function () {
-            $('html,body').animate({
-                scrollTop: 0
-            }, 1000);
-            event.preventDefault();
-        })
-        $(window).on('scroll', function () {
-            var self = $(window), height = self.height(), top = self.scrollTop();
-
-            if (top > height) {
-                if (!toTop.is(':visible')) {
-                    toTop.show();
-                }
-            } else {
-                toTop.hide();
-            }
-        })
-
-        var localstorage = window.localStorage;
-        var read = localstorage.getItem("read");
-
-        if (read) {
-            $(".notice>span").css("display", "none");
-        } else {
-            $(".notice>span").css("display", "block");
-        }
-
-//时间轴
-  var bigEvent =[{
-		'year' : 2019,
-		'events' :[
-		{
-			'mouths' : 2,
-			'times' :'2019.10',
-			'even' :'Khởi động dự án, thành lập đội'
-		},{
-			'mouths' : 6,
-			'times' :'2019.11',
-			'even' :'Thiết kế nguyên mẫu sản phẩm và xác định cấu trúc cơ bản'
-		},{
-			'mouths' : 10,
-			'times' :'2019.12',
-			'even' :'Khởi chạy hoạt động thử nghiệm, bao gồm cả obee để phát hành mã thông báo'
-		}]
-	},{
-		'year' : 2020,
-		'events' :[
-		{
-			'mouths' : 2,
-			'times' :'2020.02',
-			'even' :'Nền tảng đang được thử nghiệm trên toàn cầu'
-		},{
-			'mouths' : 6,
-			'times' :'2020.05',
-			'even' :'Hoạt động đầu tư vốn Obee và đầu tư vốn tư nhân'
-		},{
-			'mouths' : 10,
-			'times' :'2020.06',
-			'even' :'obee sẽ hạ cánh trên các sàn giao dịch nổi tiếng'
-		}
-		]},{
-		'year' : 2021,
-		'events' :[
-		{
-			'mouths' : 6,
-			'times' :'2021.Q2',
-			'even' :'Tạo chuỗi công khai đầu tiên của xã hội toàn cầu'
-		}
-		]}];
-		$('.event_wrap').eventFlow({'events':bigEvent});
-    })
-</script>
+<script src="libs/jquery.corner.js"></script>
+<script src="libs/jquery.roundabout.js"></script>
+<script src="libs/jquery.roundabout-shapes.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

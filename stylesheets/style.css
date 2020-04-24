@@ -110,8 +110,8 @@ a.btn {
 }
 
 .navbar-inverse {
-    background-color: #273143;
-    background-color: rgba(39, 49, 67, 0.85);
+    background-color: #337ab7;
+    /*background-color: rgba(39, 49, 67, 0.85);*/
     border-color: transparent;
 }
 
@@ -154,6 +154,11 @@ a.btn {
 
 .navbar-inverse .navbar-nav > li a {
     color: #ccc;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .navbar-inverse .navbar-nav > li a:hover,
@@ -162,6 +167,7 @@ a.btn {
     text-decoration: none;
     color: #f99320;
 }
+
 
 .navbar-inverse .nav-no-hover > li > a:hover,
 .navbar-inverse .nav-no-hover > li > a:focus {
@@ -202,12 +208,23 @@ a.btn {
     box-shadow: none;
 }
 
+.jq22-content div.flip-3d figure figcaption {
+padding-top: 0;
+ left: 0;
+ display: flex;
+ align-items: center;
+ bottom:0; 
+ right: 0;
+ left: 0;
+}
+
 .panel-title > a:hover {
     color: #f99320;
 }
 
 .panel-group .panel {
     border-radius: 0;
+    background-color: transparent;
 }
 
 .panel-group .panel-footer {
@@ -242,7 +259,7 @@ a.btn {
 .bhd-footer {
     color: #fff;
     padding: 2% 0 1% 0;
-    background: url(../images/foot-line.svg) no-repeat #011631 center bottom;
+    background: url(../images/foot-line_1.svg) no-repeat #3F51B5  center bottom;
 }
 
 .bhd-footer a {
@@ -376,13 +393,18 @@ h1, h2 {
 }
 
 .caret {
-    color: #fff
+    color: #fff;
+    position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-50%);
 }
+
 
 .bhd-dropdown-menu-index {
     border: none;
     min-width: 120px;
-    background-color: #222222;
+    background-color: #337ab7;
     text-align: center;
 }
 
@@ -598,14 +620,37 @@ video {
     padding-top: 80px;
 }
 
-.problem-solving-person {
+.problem-solving .container {
+    width: 75%;
+    height: 50.7172vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* .problem-solving-person {
+    padding-top: 100px;
     background: url(../images/FAQ-person.png) no-repeat left;
     min-height: 430px;
     padding-left: 38%;
+    background-size: 100%;
+} */
+
+.problem-solving-person {
+    background: url(../images/FAQ-person.png) no-repeat left;
+    background-size: 100%;
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
+.panel-group{
+    /* max-width: 500px; */
+    width: 56.33%;
+    margin-left: 32.39%;
+    background-color: transparent;
+}
 .problem-solving-person h2 {
-    margin: 60px 0 50px 0;
+    margin: -18px 0 18px 0;
 }
 
 .trade-icon a {
@@ -621,15 +666,99 @@ video {
     width: 120px;
 }
 
+.container .wallet-download {
+    min-height: auto;
+    height: 100%;
+}
+
 .wallet-download {
+    position: relative;
     background: url(../images/download-banner.png) no-repeat center top;
-    min-height: 1104px;
-    background-size: contain;
-    padding: 8%;
+    /* min-height: 750px; */
+    min-height: initial;
+    background-size: cover;
+    width: 100%;
+}
+.wallet-download .null{
+    position: absolute;
+    /* width: 50%; */
+    width: 46.3321%;
+    height: 100%;
+    /* right: 0; */
+    right: 3.6679%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 40px;
+}
+.wallet-download .null p a{
+    margin-right: 10px;
+    margin-top:20px;
+}
+.wallet-download .null p{
+    margin-top:20px;
+}
+
+.wallet-download .null p:first-child {
+    font-size: 24px;
+}
+
+.wallet-download .null p:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+}
+
+.wallet-download .null p > span {
+    display: block;
+}
+
+.wallet-download .null p > a {
+    display: inline-block;
 }
 
 .wallet-download .container {
     padding: 80px;
+}
+
+.download-content {
+    display: none;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.download-content .image {
+    width: 100%;
+    height: 300px;
+    background: url("../images/download_mobile.png") center center no-repeat;
+    background-size: contain;
+}
+.download-content h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.download-content h3 {
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.download-content p > a {
+    display: inline-block;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    #wallet.problem-solving {
+        display: none;
+    }
+
+    .download-content {
+        display: block;
+    }
 }
 
 .download-system-githup {
