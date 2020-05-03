@@ -91,6 +91,59 @@
     border-radius: 4px;
 }
 
+/* li,
+ol,
+p,
+table,
+ul {
+	margin: 0;
+	padding: 0
+}
+
+table {
+	width: auto;
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+.footer,
+.header,
+.wrap,
+.wrapper {
+	width: 100%;
+	left: 0
+}
+
+li {
+	list-style: none;
+	vertical-align: bottom
+}
+
+em,
+i {
+	font-style: normal
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+.btn_download:hover,
+.header .nav_box a:hover {
+	text-decoration: none
+}
+
+img {
+	border: 0
+}
+
+.hidden {
+	display: none
+} */
 .mask-paging {
     position: absolute;
     width: 100%;
