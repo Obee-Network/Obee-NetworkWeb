@@ -66,6 +66,33 @@ code, kbd, pre, samp {
     font-size: 1em
 }
 
+//
+
+/* .well {
+    padding: 30px;
+    background: #f4f4f4;
+    -webkit-box-shadow: 0px 0px 10px #f4f4f4;
+    -moz-box-shadow: 0px 0px 10px #f4f4f4;
+    box-shadow: 0px 0px 10px #f4f4f4;
+    border: none;
+    background: #f4f4f4;
+}
+
+.well li {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd
+}
+
+.well li i {
+    display: inline-block;
+    background: url(../images/right-normal.png);
+    width: 11px;
+    height: 11px;
+    background-size: contain;
+    vertical-align: text-top;
+    margin: 1px 5px;
+} */
+
 button, input, optgroup, select, textarea {
     margin: 0;
     font: inherit;
