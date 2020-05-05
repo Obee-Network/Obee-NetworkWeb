@@ -1,0 +1,96 @@
+@media (max-width: 1300px) {
+
+    .wallet-download .container {
+
+    }
+
+    .download-system {
+        margin-top: 66px;
+    }
+}
+
+@media (max-width: 1260px) {
+
+    .download-system {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1240px) {
+
+    .technical {
+        padding: 20px;
+    }
+
+    .download-system {
+        margin-top: 48px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slogan {
+        margin-top: 20%
+    }
+
+    .slogan h1 {
+        font-size: 40px;
+    }
+
+    .banner-about .thumbnail {
+        margin-bottom: 0;
+    }
+
+    .banner-about-es .media {
+        margin-top: 10px;
+    }
+
+    .banner-about-es h2 {
+        margin-bottom: 10px;
+    }
+
+    .line-h30px {
+        line-height: 20px;
+    }
+
+    .banner-about-what {
+        background-position: 0 370px;
+        min-height: 770px;
+    }
+
+    .banner-about .banner-about-bg {
+        padding: 20px 8%;
+    }
+
+    .btn-lg {
+        padding: 6px 12px;
+    }
+
+    .download-system {
+        margin-top: 30px;
+    }
+
+    .download-system-githup {
+        margin-top: 20px;
+    }
+
+    .technical-parameter-1 {
+        margin: 0 auto;
+        float: none;
+    }
+
+    .technical-parameter-2 {
+        float: none;
+    }
+
+    .technical-parameter-2 .mining-algorithm, .technical-parameter-2 .team-show {
+        margin: 0 auto;
+    }
+
+    .wallet-download {
+        min-height: 250px;
+    }
+
+    .problem-solving-person h2 span:nth-of-type(1), .problem-solving-person h2 span:nth-of-type(3) {
+        width: 0;
+    }
+}
