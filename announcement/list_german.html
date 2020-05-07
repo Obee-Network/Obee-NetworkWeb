@@ -257,7 +257,7 @@
     <%data.forEach(function(m,n){%>
     <li class="flex justify-space-between">
         <a href="/announcement/content_german.html?sss=<%=m.id%>" class="flex-a-set"><%=m.title%></a>
-        <span class="flex-span-set"><em><%=moment(m.releaseTime).format('YYYY-MM-DD')%></em><i></i></span>
+        <span class="flex-span-set"><em><%=timestampToTime(m.createtime)%></em><i></i></span>
     </li>
     <%})%>
 </script>
