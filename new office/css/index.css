@@ -1,0 +1,31 @@
+.community {
+    border: 1px solid #fff;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+.community::before {
+    content: "";
+    width: 8em;
+    height: 8em;
+    position: absolute;
+    left: 3em;
+    bottom: 2.5em;
+    background-image: url("../images/obeeNetwork.jpg");
+    background-size: cover;
+    display: none;
+}
+
+.community::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.community:hover::before {
+    display: block;
+}

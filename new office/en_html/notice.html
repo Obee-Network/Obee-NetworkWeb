@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/index.css" />
+    <title>Obee Network</title>
+</head>
+<body>
+    <div class="top-content gongg">
+        <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+            <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt="logo"> <span>Obee  Network</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="top-navbar-1" aria-expanded="false" style="height: 0px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="https://www.obee.vip" title="Obee Network">Obee Network</a></li>
+                    <li role="presentation" class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="White Paper">White Paper<span class="caret"></span> </a>
+                      <ul class="dropdown-menu bhd-dropdown-menu-index mt-0" aria-labelledby="dLabel">
+                          <li>
+                              <a href="whitepaper/OBEE-Whitepaper-en.pdf" target="_blank" style="overflow: visible;">
+                                  OBEE White Paper
+                              </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#" title="application">application</a></li>
+                    <li><a href="notice.html" title="Notice">Notice</a></li>
+                <li role="presentation" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" title="English">English<span class="caret"></span> </a>
+                    <ul class="dropdown-menu bhd-dropdown-menu-index" aria-labelledby="dLabel">
+						<li>
+							<a href="notice.html">
+								English
+							</a>
+						</li>
+						<li>
+							<a href="cn-notice.html">
+								中文
+							</a>
+						</li>
+						<li>
+							<a href="jp-notice.html">
+								日本語
+							</a>
+						</li>
+						<li>
+							<a href="kr-notice.html">
+								한국어
+							</a>
+						</li>
+						<li>
+							<a href="ru-notice.html">
+								русский
+							</a>
+						</li>
+						<li>
+							<a href="vn-notice.html">
+								Tiếng việt
+							</a>
+						</li>
+						<li>
+							<a href="es-notice.html">
+								Español
+							</a>
+						</li>
+						<li>
+							<a href="ger-notice.html">
+								Deutsch
+							</a>
+						</li>
+                    
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="new">
+        <div class="container">
+            <div class="has-feedback">
+                <ul id="announcementWrap" >
+                </ul>
+                <div class="mask-paging">
+                    <img src="./images/loading-0.gif" alt="loging..">
+                </div>
+            </div>
+             <div class="text-center">
+                 <ul class="pagination">
+                 </ul>
+             </div>
+         </div>
+
+
+
+    </div>
+
+    <footer>
+    <div class="container">
+        <div class="footer-link">
+        <ul>
+			<li>
+			<a href="mailto:admin@obee.vip" title="Email"><i class="iconfont icon-email-s"></i></a>
+			</li>
+			<li>
+			<a href="https://twitter.com/ObeeNetwork" title="Twitter"><i class="iconfont icon-tuite"></i></a>
+			</li>
+			<li>
+			<a href="https://t.me/ObeeNetwork" title="Telegram"><i class="iconfont icon-zhifeiji"></i></a>
+			</li>
+			<li>
+			<a class="community" href="javascript: void 0;" title="WeChat"><i class="iconfont icon-weixin"></i></a>
+			</li>
+        </ul>
+        </div>
+        <p class="footer-text">© 2020 Obee Network Technical Team. All Rights Reserved</p>
+    </div>
+    </footer>
+      
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ejs.min.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+    <script>
+        $(function ($) {
+            var ONETIME = 0;
+    
+            getAnnouncementList(0);
+    
+            function getAnnouncementList(n) {
+                $(".mask-paging").css({display: '-ms-flexbox', display: 'flex'});
+    
+                $.ajax({
+                    type: "post",
+                    url: "http://admin.ceo-1.com/index/ajax/get_notice",
+                    dataType: "JSONP",
+                    data: {language: '1', limit: 4, skip: n},
+                    success: function (msg) {
+                        
+                        if (ONETIME === 0) {
+                            let limit = 4;
+                            msg.count > 0 && initPaging(msg.count,limit);
+                            // console.log(msg)
+                            ONETIME++;
+                        }
+    
+                        if (msg.count === 0) {
+                            $("#announcementWrap").html("<img class=\"center-block\" src=\"./images/no-data.png\" alt=\"BHD\" style=\"vertical-align: text-bottom\">");
+                        } else {
+                            $("#announcementWrap").html(ejs.render($("#announcementDomTmp").html(), {data: msg.data}));
+                        }
+    
+                        $(".mask-paging").css({display: 'none'});
+                    }, error: function (err) {
+                        $(".mask-paging").css({display: 'none'});
+                        $("#announcementWrap").html("<div class=\"well\"><div class=\"text_ssr\">Service error</div></div>");
+                    }
+                });
+            }
+    
+            function initPaging(m,n) {
+                var options = {
+                    bootstrapMajorVersion: 3,
+                    currentPage: 1,
+                    numberOfPages: 5,
+                    totalPages: Math.ceil(m / n),
+                    itemTexts: function (type, page, current) {
+                        switch (type) {
+                        case "first":
+                            return "<<";
+                        case "prev":
+                            return "<";
+                        case "next":
+                            return ">";
+                        case "last":
+                            return ">>";
+                        case "page":
+                            return page;
+                        }
+                    },
+                    tooltipTitles: function (type, page, current) {
+                    switch (type) {
+                        case "first":
+                        case "prev":
+                        case "next":
+                        case "last":
+                            return;
+                    }
+                },
+                    onPageClicked: function (e, originalEvent, type, page) {
+                        getAnnouncementList(page - 1);
+                    }
+                };
+    
+                $(".pagination").bootstrapPaginator(options);
+            }
+        });
+    
+        function getAesString(data, key, iv) {
+            var key = CryptoJS.enc.Utf8.parse(key);
+            var iv = CryptoJS.enc.Utf8.parse(iv);
+            var encrypted = CryptoJS.AES.encrypt(data, key,
+                {
+                    iv: iv,
+                    mode: CryptoJS.mode.CBC,
+                    padding: CryptoJS.pad.Pkcs7
+                });
+            return encrypted.toString();
+        }
+    
+        function getAES(data) {
+            var key = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+            var iv = '1234567812345678';
+            var encrypted = getAesString(data, key, iv);
+            return encrypted;
+        }
+        function timestampToTime(timestamp) {
+            var date = new Date(timestamp * 1000);
+            var Y = date.getFullYear() + '-';
+            var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '.';
+            var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+            var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+            var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+            var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+            return M+D;
+    
+        };
+        function timestampToTime2(timestamp) {
+            var date = new Date(timestamp * 1000);
+            var Y = date.getFullYear() ;
+            return Y;
+    
+        };
+        
+    </script>
+    
+    <script charset="UTF-8" type="text/template" id="announcementDomTmp">
+        <%data.forEach(function(m,n){%>
+        <li class="nes-lis">
+            <div class="nes_l">
+                <div class="nes-lis_l">
+                    <p><%=timestampToTime(m.createtime)%></p>
+                    <div class="spl">
+                        <span><%=timestampToTime2(m.createtime)%></span>
+                    </div>                           
+                </div>
+            </div>
+            <div class="nes_r">
+                <div class="nes-lis_r">
+                    <h4><a href="#"><%=m.title%></a> </h4>
+                    <p><%-m.content%></p>
+                </div>
+            </div>
+
+        </li>
+        <%})%>
+    </script>
+</body>
+</html>
